@@ -1,0 +1,39 @@
+body{
+    margin:0px;
+}
+
+#navbar{
+    background-image: url('../img/polygonal19.jpg');
+    color: #2d3436;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 30px;
+    width: auto;
+    margin: 0px 0px 0px 0px;
+}
+#navbar h4{
+    font-size: 30px;
+    margin: -10px 0px 0px 5px;
+}
+#navbar p{
+    margin: 0px 0px 0px 5px;
+    font-size: small;
+}
+
+#subnavbar{
+    background-color: #2d3436;
+    padding: 1px;
+}
+#subnavbar ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0px 40px 0px 0px;
+}
+
+#subnavbar ul li a{
+    text-decoration: none;
+    color: azure;
+}
+
+
