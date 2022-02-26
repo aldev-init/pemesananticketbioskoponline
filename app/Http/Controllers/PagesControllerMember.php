@@ -13,4 +13,8 @@ class PagesControllerMember extends Controller
     public function home(){
         return view('Member.Beranda');
     }
+
+    public function film(){
+        return view('Member.DetailFilm');
+    }
 }

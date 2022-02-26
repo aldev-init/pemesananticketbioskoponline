@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{asset('css/berandamember.css')}}">
-    <title>Login & Registrasi | Layar Kaca Kinclong</title>
+    <title>Beranda | Layar Kaca Kinclong</title>
 </head>
 <body>
     @section('body')
@@ -67,8 +67,8 @@
                             <p>Sinopsis : Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam magnam, quo delectus nulla reprehenderit placeat iusto quibusdam voluptate quasi quod? Officia sed distinctio natus a libero, repellendus veniam officiis sunt!</p>
                         </div>
                     </tr>
-
                 </table>
+                <p>Halaman 1</p>
             </div>
     </div>
     <div id="formlogin">

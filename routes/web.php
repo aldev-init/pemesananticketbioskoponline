@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/login',[PagesControllerMember::class,'login']);
 Route::get('/',[PagesControllerMember::class,'home']);
+Route::get('/film',[PagesControllerMember::class,'film']);

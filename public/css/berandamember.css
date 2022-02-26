@@ -83,7 +83,7 @@ body{
     float: right;
     padding: 15px 20px ;
     margin: 0px 30px 0px 0px;
-    transform: translate(0px,-810px);
+    transform: translate(0px,-865px);
     /* border-radius: 10px; */
 }
 #title{
@@ -119,7 +119,7 @@ body{
     float: right;
     padding: 15px 20px ;
     margin: 0px -539px 0px 0px;
-    transform: translate(0px,-517px);
+    transform: translate(0px,-575px);
 }
 #titlemovie{
     background-color:#0984e3;
