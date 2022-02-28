@@ -17,4 +17,16 @@ class PagesControllerMember extends Controller
     public function film(){
         return view('Member.DetailFilm');
     }
+
+    public function daftarfilm(){
+        return view('Member.DaftarFilm');
+    }
+
+    public function daftarpemesanantiket(){
+        return view('Member.DaftarPemesananTiket');
+    }
+
+    public function pemesanantiket(){
+        return view('Member.PemesananTiket');
+    }
 }

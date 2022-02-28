@@ -1,0 +1,15 @@
+#container{
+    padding: 10px;
+}
+
+
+table tr th{
+    background-color: #222f3e;
+}
+table tr td{
+    color: black;
+    background-color: #dfe6e9;
+}
+table tr th,td{
+    padding: 7px;
+}

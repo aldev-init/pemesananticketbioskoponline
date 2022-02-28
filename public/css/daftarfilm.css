@@ -1,0 +1,20 @@
+#bodydaftar{
+    padding: 10px;
+}
+#daftar{
+    margin: 0px 0px 0px -10px;
+}
+#daftar ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin-bottom: 0px;
+}
+/* for li ganjil */
+#daftar ul li:nth-child(odd){
+    margin-right: 55px;
+}
+
+#daftar li button{
+    margin-left: 85px;
+}
+
