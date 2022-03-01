@@ -2,7 +2,7 @@
     padding: 10px;
 }
 #daftar{
-    margin: 0px 0px 0px -10px;
+    margin: 0px 0px 0px -27px;
 }
 #daftar ul li{
     list-style-type: none;
@@ -11,10 +11,22 @@
 }
 /* for li ganjil */
 #daftar ul li:nth-child(odd){
-    margin-right: 55px;
+    margin-right: 25px;
 }
 
-#daftar li button{
-    margin-left: 85px;
+
+#daftar li .detail-button{
+    background-color: #2c3e50;
+    border-color: #0fb9b1;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-left: 100px;
+    transition: ease-in 0.3s;
+}
+
+#daftar li .detail-button:hover{
+    background-color: #3498db;
+    color: black;
 }
 

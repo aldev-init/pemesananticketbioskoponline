@@ -72,7 +72,7 @@
                     </tr>
                     <tr>
                         <button id="buttonLg">Login</button>
-                        <button>Batal</button>
+                        <button id="buttonBt">Batal</button>
                         {{-- <a href=""></a> --}}
                     </tr>
                 </table>

@@ -1,4 +1,5 @@
 @extends('layout.navbarMembers')
+@section('judul','Register')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,8 +43,8 @@
                     <textarea name="alamat_lengkap" id="alamatlengkapInp" cols="40" rows="10"></textarea><br>
                 </tr>
                 <tr >
-                    <button class="button">Mendaftar</button>
-                    <button>Batal</button>
+                    <button id="buttonDt">Mendaftar</button>
+                    <button id="buttonBt">Batal</button>
                 </tr>
             </table>
         </div>

@@ -39,3 +39,34 @@
 .button{
     margin: 10px 10px 0px 490px;
 }
+#buttonDt{
+    background-color: #2c3e50;
+    color:white;
+    border-color:#0fb9b1 ;
+    width: 110px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 15px 20px 0px 195px;
+    font-family: 'Ubuntu', sans-serif;
+    transition: ease-in 0.2s;
+}
+#buttonBt{
+    background-color: #2c3e50;
+    border-color:#0fb9b1 ;
+    color: white;
+    width: 110px;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    transition: ease-in 0.2s;
+}
+#buttonDt:hover{
+    background-color: #0fb9b1;
+    font-family: 'Ubuntu', sans-serif;
+    color: black;
+}
+#buttonBt:hover{
+    background-color: #e74c3c;
+    font-family: 'Ubuntu', sans-serif;
+    color: black;
+}

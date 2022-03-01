@@ -17,32 +17,24 @@
         <div id="daftar">
             <ul>
                 <li>
-                    <p>Spiderman This Is My Home</p>
-                    <video width="100%" height="150px" controls>
-                        <source src="{{asset('video/spiderman windah.mp4')}}" type="">
-                    </video><br>
-                    <button>Lihat Detail</button>
+                    <p>Spiderman No Way Home</p>
+                    <iframe width="300" height="150" src="https://www.youtube.com/embed/JfVOs4VSpmA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                    <button class="detail-button">Lihat Detail</button>
                 </li>
                 <li>
-                    <p>Spiderman Windah Parker</p>
-                    <video width="100%" height="150px" controls>
-                        <source src="{{asset('video/windah.mp4')}}" type="">
-                    </video><br>
-                    <button>Lihat Detail</button>
+                    <p>Doctor Strange Multiverse Of Madness</p>
+                    <iframe width="300" height="150" src="https://www.youtube.com/embed/aWzlQ2N6qqg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                    <button class="detail-button">Lihat Detail</button>
                 </li>
                 <li>
-                    <p>Spiderman Windah Parker</p>
-                    <video width="100%" height="150px" controls>
-                        <source src="{{asset('video/windah.mp4')}}" type="">
-                    </video><br>
-                    <button>Lihat Detail</button>
+                    <p>Doctor Strange Multiverse Of Madness</p>
+                    <iframe width="300" height="150" src="https://www.youtube.com/embed/8YjFbMbfXaQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                    <button class="detail-button">Lihat Detail</button>
                 </li>
                 <li>
-                    <p>Spiderman This Is My Home</p>
-                    <video width="100%" height="150px" controls>
-                        <source src="{{asset('video/spiderman windah.mp4')}}" type="">
-                    </video><br>
-                    <button>Lihat Detail</button>
+                    <p>Doctor Strange Multiverse Of Madness</p>
+                    <iframe width="300" height="150" src="https://www.youtube.com/embed/8YjFbMbfXaQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                    <button class="detail-button">Lihat Detail</button>
                 </li>
             </ul>
         </div>
