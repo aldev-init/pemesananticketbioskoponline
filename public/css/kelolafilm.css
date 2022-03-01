@@ -1,0 +1,68 @@
+#bodydaftar{
+    padding: 10px;
+}
+#daftar{
+    margin: 0px 0px 0px -20px;
+}
+#daftar ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin-bottom: 0px;
+}
+/* for li ganjil */
+#daftar ul li{
+    margin-right: 25px;
+}
+
+
+#daftar li .detail-button{
+    background-color: #2c3e50;
+    border-color: #0fb9b1;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-left: 60px;
+    transition: ease-in 0.3s;
+}
+
+#daftar li .detail-button:hover{
+    background-color: #3498db;
+    color: black;
+}
+.judulfilm{
+    color: white;
+}
+#judul{
+    background-color: #14749a;
+    color: white;
+    padding: 1px 20px;
+}
+#add-film{
+    float: right;
+    margin: -45px 0px 0px 0px;
+    background-color: #2c3e50;
+    border-color: #0fb9b1;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-left: 100px;
+    transition: ease-in 0.3s;
+}
+#add-film:hover{
+    background-color: #3498db;
+    color: black;
+}
+.hapus-button{
+    float: right;
+    background-color: #2c3e50;
+    border-color: #0fb9b1;
+    color: white;
+    padding: 5px 10px;
+    transform: translate(-70px, 0px);
+    border-radius: 10px;
+    transition: ease-in 0.3s;
+}
+.hapus-button:hover{
+    background-color: #e74c3c;
+    color: black;
+}

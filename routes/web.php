@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PagesControllerMember;
+use App\Http\Controllers\PagesControllerAdmin;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +14,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//member
 Route::get('/login',[PagesControllerMember::class,'login']);
 Route::get('/',[PagesControllerMember::class,'home']);
 Route::get('/film',[PagesControllerMember::class,'film']);
 Route::get('/daftarfilm',[PagesControllerMember::class,'daftarfilm']);
 Route::get('/daftarpemesanantiket',[PagesControllerMember::class,'daftarpemesanantiket']);
 Route::get('/pemesanantiket',[PagesControllerMember::class,'pemesanantiket']);
+
+//admin
+Route::get('/kelolafilm',[PagesControllerAdmin::class,'kelolafilm']);

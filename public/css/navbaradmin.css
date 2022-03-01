@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+body{
+    margin:0px;
+    background-color: #222f3e;
+}
+
+#navbar{
+    background-image: url('../img/polygonal19.jpg');
+    color: #2d3436;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 30px;
+    width: auto;
+    margin: 0px 0px 0px 0px;
+}
+#navbar h4{
+    font-size: 30px;
+    margin: -10px 0px 0px 5px;
+}
+#navbar p{
+    margin: 0px 0px 0px 5px;
+    font-size: small;
+}
+
+#subnavbar{
+    background-color: #2d3436;
+    padding: 1px;
+}
+#subnavbar ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0px 40px 0px 0px;
+}
+
+#subnavbar ul li a{
+    text-decoration: none;
+    color: azure;
+    cursor: pointer;
+}
+
+#sidebar{
+    width: 20%;
+    height: 100%;
+    /* background-color: #2d3436; */
+    padding: 20px;
+    border-right: 1px solid rgb(60,175,204,0.3);
+}
+#sidebar #titlebar{
+    color: #fff;
+    background-color: #14749a;
+    padding: 1px 20px;
+    margin: 0px 0px 20px 0px;
+}
+#sidebar #bodybar ul{
+    margin: 0px 0px 0px -43px;
+}
+#sidebar #bodybar ul li{
+    list-style-type: none;
+}
+#sidebar #bodybar ul li a{
+    color: white;
+    text-decoration: none;
+}
+#sidebar #bodybar .button{
+    background-color: #4aaec5;
+    margin: 10px 5px;
+    padding: 10px 20px;
+    transition: ease-in 0.3s;
+}
+#sidebar #bodybar .button:hover{
+    box-shadow: 0px 0px 25px #14749a;
+}
+#mainbody{
+    /* width: 80%;k */
+    margin: -363px 0px 0px 320px;
+}
+
