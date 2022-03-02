@@ -22,7 +22,10 @@
                 <li><a href="">Manage About</a></li>
                 <li><a href="">Kelola Help</a></li>
                 <li><a href="">Manage Members</a></li>
-                <li><a href="">Logout</a></li>
+                <li><a href="/logoutadmin">Logout</a></li>
+                @if (Auth::guard('admin')->check())
+                    <li><b><a id="welcome" href="">Hello Admin</a></b></li>
+                @endif
             </ul>
         </div>
     </nav>

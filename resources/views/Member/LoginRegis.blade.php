@@ -10,7 +10,7 @@
 </head>
 <body>
     @section('body')
-    <form action="" method="post">
+    <form action="/register" method="post">
         @csrf
         <div id="titlereg">
             <h2>Form Registrasi Costumer</h2>
@@ -19,20 +19,20 @@
             <p>*Silahkan mengisi formulir pendaftaran jika anda tidak punya akun</p>
             <table>
                 <tr>
-                    <p>Nama Lengkap: </p>
-                    <input type="text" name="nama" id="namaInp">
+                    <p>Nama Lengkap*: </p>
+                    <input type="text" name="nama_lengkap" id="namaInp" required>
                 </tr>
                 <tr>
-                    <p>Username: </p>
-                    <input type="text" name="username" id="usernameInp">
+                    <p>Username*: </p>
+                    <input type="text" name="username" id="usernameInp" required>
                 </tr>
                 <tr>
-                    <p>Password: </p>
-                    <input type="text" name="password" id="passwordInp">
+                    <p>Password*: </p>
+                    <input type="password" name="password" id="passwordInp" required>
                 </tr>
                 <tr>
-                    <p>Email: </p>
-                    <input type="text" name="email" id="emailInp">
+                    <p>Email*: </p>
+                    <input type="text" name="email" id="emailInp" required>
                 </tr>
                 <tr>
                     <p>No Telepon: </p>
@@ -51,4 +51,9 @@
     </form>
     @endsection
 </body>
+@if (Session::has('status'))
+    <script>
+        alert('{{Session::get("status")}}');
+    </script>
+@endif
 </html>

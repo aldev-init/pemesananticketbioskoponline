@@ -12,7 +12,7 @@
     @section('body')
         <div id="container">
             <div id="judulcontent">
-                <h3>Daftar Pemesanan Ticket Oleh: Muhammad Alghifari</h3>
+                <h3>Daftar Pemesanan Ticket Oleh: {{Auth::user()->nama_lengkap}}</h3>
             </div>
             <div id="bodycontent">
                 <table >

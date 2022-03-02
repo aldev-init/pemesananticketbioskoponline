@@ -27,13 +27,13 @@
                     <button class="detail-button">Lihat Detail</button>
                 </li>
                 <li>
-                    <p>Doctor Strange Multiverse Of Madness</p>
+                    <p>Marvel Shang Chi</p>
                     <iframe width="300" height="150" src="https://www.youtube.com/embed/8YjFbMbfXaQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
                     <button class="detail-button">Lihat Detail</button>
                 </li>
                 <li>
-                    <p>Doctor Strange Multiverse Of Madness</p>
-                    <iframe width="300" height="150" src="https://www.youtube.com/embed/8YjFbMbfXaQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                    <p>The Social Network</p>
+                    <iframe width="300" height="150" src="https://www.youtube.com/embed/2RB3edZyeYw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
                     <button class="detail-button">Lihat Detail</button>
                 </li>
             </ul>

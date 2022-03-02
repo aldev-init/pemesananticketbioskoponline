@@ -76,3 +76,8 @@ body{
     margin: -363px 0px 0px 320px;
 }
 
+#welcome{
+    margin: 0px 0px 0px 600px;
+    pointer-events: none;
+    color: #1782a6;
+}

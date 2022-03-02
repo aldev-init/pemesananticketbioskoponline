@@ -6,9 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Member extends Authenticatable
+class AdminData extends Authenticatable
 {
-    protected $table='member';
-    protected $fillable=['nama_lengkap','username','password','email','no_telp','alamat_lengkap'];
+    protected $table='admin_data';
+    protected $fillable = [
+        'username', 'password',
+    ];
     use HasFactory;
 }
