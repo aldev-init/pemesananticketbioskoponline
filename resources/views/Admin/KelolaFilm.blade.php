@@ -13,38 +13,35 @@
     <div id="bodydaftar">
         <div id="judul">
             <h3>Daftar Film</h3>
-            <button id="add-film">Tambah Film</button>
+            <button id="add-film" type="button" onclick="tambahfilm()">Tambah Film</button>
         </div>
         <div id="daftar">
             <ul>
+                @foreach ($film as $flm )
                 <li>
-                    <p class="judulfilm">Spiderman No Way Home</p>
-                    <iframe width="300" height="150" src="https://www.youtube.com/embed/JfVOs4VSpmA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                    <p class="judulfilm">{{$flm->judul_film}}</p>
+                    <video width="300" height="150" src="{{asset('storage/'.$flm->video)}}" controls></video><br>
                     <button class="detail-button">Lihat Detail</button>
-                    <button class="hapus-button">Hapus</button>
+                    <form action="/hapusfilm/{{$flm->id}}" method="POST">
+                        @csrf
+                        <button class="hapus-button">Hapus</button>
+                    </form>
                 </li>
-                <li>
-                    <p class="judulfilm">Doctor Strange Multiverse Of Madness</p>
-                    <iframe width="300" height="150" src="https://www.youtube.com/embed/aWzlQ2N6qqg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
-                    <button class="detail-button">Lihat Detail</button>
-                    <button class="hapus-button">Hapus</button>
-                </li>
-                <li>
-                    <p class="judulfilm">Marvel Shang Chi</p>
-                    <iframe width="300" height="150" src="https://www.youtube.com/embed/8YjFbMbfXaQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
-                    <button class="detail-button">Lihat Detail</button>
-                    <button class="hapus-button">Hapus</button>
-                </li>
-                <li>
-                    <p class="judulfilm">The Social Network</p>
-                    <iframe width="300" height="150" src="https://www.youtube.com/embed/2RB3edZyeYw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
-                    <button class="detail-button">Lihat Detail</button>
-                    <button class="hapus-button">Hapus</button>
-                </li>
+                @endforeach
             </ul>
         </div>
         <p>Halaman 1</p>
     </div>
     @endsection
 </body>
+<script>
+    function tambahfilm(){
+        window.location.href = "/tambahfilm";
+    }
+</script>
+@if (Session::has('status'))
+    <script>
+        alert("{{Session::get('status')}}");
+    </script>
+@endif
 </html>

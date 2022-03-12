@@ -1,5 +1,5 @@
 @extends('layout.navbarMembers')
-@section('judul','Register')
+@section('judul','Register &&  Login')
 <!DOCTYPE html>
 <html lang="en">
 <head>

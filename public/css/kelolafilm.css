@@ -58,7 +58,7 @@
     border-color: #0fb9b1;
     color: white;
     padding: 5px 10px;
-    transform: translate(-70px, 0px);
+    transform: translate(-70px, -30px);
     border-radius: 10px;
     transition: ease-in 0.3s;
 }

@@ -19,6 +19,7 @@ class SystemControllerMember extends Controller
             'email'=>$request->email,
             'no_telp'=>$request->no_telp,
             'alamat_lengkap'=>$request->alamat_lengkap,
+            'role'=>"member",
         ]);
         if($member){
             return redirect('/login')->with('status','Register Berhasil,Silahkan Login');

@@ -83,6 +83,9 @@ table tr td{
 #displayjamtayang{
     float: right;
     margin: -680px 70px 0px 0px;
+    /* position: fixed;
+    transform: translate(400px, -60px); */
+
 }
 #displayjamtayang textarea{
     width: 200px;
@@ -115,4 +118,5 @@ table tr td{
     font-family: 'Ubuntu', sans-serif;
     color: black;
 }
+
 

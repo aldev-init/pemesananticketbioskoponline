@@ -81,8 +81,7 @@
                     <tr>
                         <button class="button">Pesan Tiket</button>
                         <button class="button">Beli Tiket</button>
-                        <button class="button">Keluar</button>
-                        <br>
+                        <button class="button" type="button" onclick="exit()">Keluar</button>
                     </tr>
                     <tr>
                         <table>
@@ -108,6 +107,17 @@
                                 <td>1</td>
                                 <td>30.000</td>
                             </tr>
+                            {{-- <tr>
+                                <td>1</td>
+                                <td>Muhammad Alghifari</td>
+                                <td>Studio 64</td>
+                                <td>Spiderman Bocil Kematian Coming</td>
+                                <td>12.00</td>
+                                <td>Senin</td>
+                                <td>04</td>
+                                <td>1</td>
+                                <td>30.000</td>
+                            </tr> --}}
                         </table>
                     </tr>
                     <tr>
@@ -131,4 +141,9 @@
     </div>
     @endsection
 </body>
+<script>
+    function exit(){
+        window.location.href = "/";
+    }
+</script>
 </html>

@@ -19,29 +19,46 @@ use Illuminate\Support\Facades\Route;
 
 //pages
 //member
-Route::get('/login',[PagesControllerMember::class,'login'])->name('login');
-Route::get('/',[PagesControllerMember::class,'home']);
-Route::get('/film',[PagesControllerMember::class,'film']);
-Route::get('/daftarfilm',[PagesControllerMember::class,'daftarfilm']);
-
-Route::middleware('auth')->group(function(){
-    Route::get('/daftarpemesanantiket',[PagesControllerMember::class,'daftarpemesanantiket']);
-    Route::get('/pemesanantiket',[PagesControllerMember::class,'pemesanantiket']);
-    Route::get('/logout',[SystemControllerMember::class,'logout']);
+Route::controller(PagesControllerMember::class)->group(function (){
+    Route::get('/login','login')->name('login');
+    Route::get('/','home');
+    Route::get('/film','film');
+    Route::get('/daftarfilm','daftarfilm');
+    Route::middleware(['auth'])->group(function(){
+        Route::get('/daftarpemesanantiket','daftarpemesanantiket');
+        Route::get('/pemesanantiket','pemesanantiket');
+    });
 });
 
-//system Member
-Route::post('/register',[SystemControllerMember::class,'register']);
-Route::post('/login',[SystemControllerMember::class,'login']);
+
+//system
+//member
+Route::controller(SystemControllerMember::class)->group(function(){
+    Route::middleware(['auth'])->group(function(){
+        Route::get('/logout','logout');
+    });
+    Route::post('/register','register');
+    Route::post('/login','login');
+});
 
 
 //Pages Admin
-Route::middleware('auth:admin')->group(function(){
-    Route::get('/kelolafilm',[PagesControllerAdmin::class,'kelolafilm']);
-    Route::get('/logoutadmin',[SystemControllerAdmin::class,'logoutadmin']);
+Route::controller(PagesControllerAdmin::class)->group(function(){
+    Route::middleware(['auth:admin'])->group(function(){
+        Route::get('/kelolafilm','kelolafilm');
+        Route::get('/tambahfilm','tambahfilm');
+    });
 });
-//system Admin
 
+
+//system Admin
+Route::controller(SystemControllerAdmin::class)->group(function(){
+    Route::middleware(['auth:admin'])->group(function(){
+        Route::get('/logoutadmin','logoutadmin');
+        Route::post('/tambahfilm','tambahfilm');
+        Route::post('/hapusfilm/{id}','hapusfilm');
+    });
+});
 
 
 

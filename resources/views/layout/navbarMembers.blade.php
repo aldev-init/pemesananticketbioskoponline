@@ -26,7 +26,7 @@
                 <li><a href="">About</a></li>
                 <li><a href="">Help</a></li>
                 @if (Auth::check())
-                <li><a style="margin-left: 400px; color: #3498db">WELCOME {{strtoupper(Auth::user()->nama_lengkap)}}</a></li>
+                <li><a style="margin-left: 400px; color: #3498db">WELCOME {{str(Auth::user()->nama_lengkap)->upper()->value}}</a></li>
                 @endif
             </ul>
         </div>
@@ -56,7 +56,7 @@
         </nav>
         <hr id="line">
     </div>
-    @if (!Auth::check())
+    @if (!Auth::check() && !Auth::guard('admin')->check())
     <div id="formlogin">
         <form action="/login" method="post">
             @csrf
@@ -78,6 +78,39 @@
                         <button type="button" id="buttonBt" onclick="batal()">Batal</button>
                         {{-- <a href=""></a> --}}
                     </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+    @elseif(Auth::guard('admin')->check())
+    <div id="formlogin">
+        <form action="/logout" method="post">
+            @csrf
+            <div id="title">
+                <h2>Menu Member</h2>
+            </div>
+            <div id="bodylogin">
+                <table>
+                    <tr>
+                        <p class="text-auth">Selamat Datang</p>
+                        <p class="text-auth">{{Auth::guard('admin')->user()->nama_lengkap}}</p>
+                        <p class="text-auth">Anda Login Sebagai Admin,Tidak Bisa Akses Halaman Member</p>
+                    </tr>
+                    <tr>
+                        <a href="/kelolafilm" id="menu-link-btn">Ke Halaman Admin</a><br>
+                    </tr>
+                    {{-- <tr>
+                        <a href="" id="menu-link-btn">Laporan Pemesanan</a><br>
+                    </tr>
+                    <tr>
+                        <a href="" id="menu-link-btn">Kelola Profile</a><br>
+                    </tr>
+                    <tr>
+                        <a href="" id="menu-link-btn">Ganti Password</a><br>
+                    </tr>
+                    <tr>
+                        <a href="/logout" id="menu-link-btn">Logout</a><br>
+                    </tr> --}}
                 </table>
             </div>
         </form>
