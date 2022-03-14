@@ -22,11 +22,12 @@ use Illuminate\Support\Facades\Route;
 Route::controller(PagesControllerMember::class)->group(function (){
     Route::get('/login','login')->name('login');
     Route::get('/','home');
-    Route::get('/film','film');
+    Route::get('/film/{id}','film');
     Route::get('/daftarfilm','daftarfilm');
     Route::middleware(['auth'])->group(function(){
         Route::get('/daftarpemesanantiket','daftarpemesanantiket');
         Route::get('/pemesanantiket','pemesanantiket');
+        Route::get('/pemesanantiket/{id}','pemesanantiketid');
     });
 });
 
@@ -47,6 +48,11 @@ Route::controller(PagesControllerAdmin::class)->group(function(){
     Route::middleware(['auth:admin'])->group(function(){
         Route::get('/kelolafilm','kelolafilm');
         Route::get('/tambahfilm','tambahfilm');
+        Route::get('/kelolajam','kelolajam');
+        Route::get('/detailfilm/{id}','detailfilm');
+        Route::get('/kelolakategori','kelolakategori');
+        Route::get('/tambahkategori','tambahkategori');
+        Route::get('/editkategori/{id}','editkategori');
     });
 });
 
@@ -57,6 +63,10 @@ Route::controller(SystemControllerAdmin::class)->group(function(){
         Route::get('/logoutadmin','logoutadmin');
         Route::post('/tambahfilm','tambahfilm');
         Route::post('/hapusfilm/{id}','hapusfilm');
+        Route::post('/editfilm/{id}','editfilm');
+        Route::post('/tambahkategori','tambahkategori');
+        Route::post('/editkategori/{id}','editkategori');
+        Route::get('/hapuskategori/{id}','hapuskategori');
     });
 });
 

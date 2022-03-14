@@ -16,30 +16,22 @@
         </div>
         <div id="daftar">
             <ul>
+                @foreach ($film as $flm )
                 <li>
-                    <p>Spiderman No Way Home</p>
-                    <iframe width="300" height="150" src="https://www.youtube.com/embed/JfVOs4VSpmA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
-                    <button class="detail-button">Lihat Detail</button>
+                    <p>{{$flm->judul_film}}</p>
+                    <video controls width="300" height="150" src="{{asset('storage/'.$flm->video)}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></video><br>
+                    <button class="detail-button" type="button" onclick="redirect({{$flm->id}})">Lihat Detail</button>
                 </li>
-                <li>
-                    <p>Doctor Strange Multiverse Of Madness</p>
-                    <iframe width="300" height="150" src="https://www.youtube.com/embed/aWzlQ2N6qqg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
-                    <button class="detail-button">Lihat Detail</button>
-                </li>
-                <li>
-                    <p>Marvel Shang Chi</p>
-                    <iframe width="300" height="150" src="https://www.youtube.com/embed/8YjFbMbfXaQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
-                    <button class="detail-button">Lihat Detail</button>
-                </li>
-                <li>
-                    <p>The Social Network</p>
-                    <iframe width="300" height="150" src="https://www.youtube.com/embed/2RB3edZyeYw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
-                    <button class="detail-button">Lihat Detail</button>
-                </li>
+                @endforeach
             </ul>
         </div>
         <p>Halaman 1</p>
     </div>
     @endsection
 </body>
+<script>
+    function redirect(id){
+        window.location.href = "/film/"+id;
+    }
+</script>
 </html>

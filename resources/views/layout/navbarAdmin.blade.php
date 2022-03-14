@@ -37,7 +37,7 @@
             <ul>
                 <li>
                     <div class="button">
-                        <a href="">Kelola Jam</a>
+                        <a href="/kelolajam">Kelola Jam</a>
                     </div>
                 </li>
                 <li>
@@ -47,7 +47,7 @@
                 </li>
                 <li>
                     <div class="button">
-                        <a href="">Kelola Kategori Film</a>
+                        <a href="/kelolakategori">Kelola Kategori Film</a>
                     </div>
                 </li>
                 <li>

@@ -21,4 +21,8 @@ class Film extends Model
         'harga'
     ];
     use HasFactory;
+
+    public function Kategori(){
+        return $this->belongsTo(Kategori::class,'kategori');
+    }
 }

@@ -20,7 +20,7 @@
         <div id="subnavbar">
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="">Now Playing</a></li>
+                <li><a href="/daftarfilm">Now Playing</a></li>
                 <li><a href="">Coming Soon</a></li>
                 <li><a href="">Theater</a></li>
                 <li><a href="">About</a></li>

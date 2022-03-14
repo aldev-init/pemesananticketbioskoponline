@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Film;
 
 class PagesControllerMember extends Controller
 {
@@ -11,15 +12,18 @@ class PagesControllerMember extends Controller
     }
 
     public function home(){
-        return view('Member.Beranda');
+        $film = Film::all();
+        return view('Member.Beranda',compact('film'));
     }
 
-    public function film(){
-        return view('Member.DetailFilm');
+    public function film($id){
+        $film = Film::where('id',$id)->first();
+        return view('Member.DetailFilm',compact('film'));
     }
 
     public function daftarfilm(){
-        return view('Member.DaftarFilm');
+        $film = Film::all();
+        return view('Member.DaftarFilm',compact('film'));
     }
 
     public function daftarpemesanantiket(){
@@ -27,6 +31,12 @@ class PagesControllerMember extends Controller
     }
 
     public function pemesanantiket(){
-        return view('Member.PemesananTiket');
+
+        return redirect('/pemesanantiket/4');
+    }
+    public function pemesanantiketid($id){
+        $film = Film::where('id',$id)->first();
+        $filmall = Film::all();
+        return view('Member.PemesananTiket',compact('film','filmall'));
     }
 }

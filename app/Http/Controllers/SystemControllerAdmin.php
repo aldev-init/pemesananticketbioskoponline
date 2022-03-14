@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Film;
+use App\Models\Kategori;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
@@ -43,5 +44,29 @@ class SystemControllerAdmin extends Controller
         Storage::delete($video);
         Storage::delete($gambar);
         return redirect('/kelolafilm')->with('status','Hapus Film Berhasil');
+    }
+
+    public function editfilm(Request $request ,$id){
+            //kosong
+    }
+
+    public function tambahkategori(Request $request){
+        Kategori::create([
+            'kategori'=>$request->kategori
+        ]);
+        return redirect('/kelolakategori')->with('status','Tambah Kategori Berhasil');
+    }
+
+    public function editkategori(Request $request,$id){
+        $kategori = [
+            'kategori'=> $request->kategori
+        ];
+        Kategori::where('id',$id)->update($kategori);
+        return redirect('/kelolakategori')->with('status','Edit Kategori Berhasil');
+    }
+
+    public function hapuskategori($id){
+        Kategori::where('id',$id)->delete();
+        return redirect('/kelolakategori')->with('status','Hapus Kategori Berhasil');
     }
 }

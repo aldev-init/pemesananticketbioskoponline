@@ -1,5 +1,4 @@
 @extends('layout.navbarMembers')
-@section('judul','Film Anu')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,23 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{asset('css/detailfilm.css')}}">
+    <title>{{$film->judul_film}} | LayarKacaKinclong22</title>
 </head>
 <body>
     @section('body')
     <div id="bodydaftar">
         <div id="judulfilm">
-            <h3>Spiderman,No Way Home</h3>
+            <h3>{{$film->judul_film}}</h3>
         </div>
         <video width="100%"  height="100%" autoplay controls muted>
-            <source src="{{asset('video/SPIDER-MAN_ NO WAY HOME - Official Trailer (HD).mp4')}}" type="">
+            <source src="{{asset('storage/'.$film->video)}}" type="">
         </video>
         <div id="infofilm">
-            <p>Judul Film : Spiderman,No Way Home</p>
-            <p>Produser : -</p>
-            <p>Produksi : Marvel Studios</p>
-            <p>Home Page : -</p>
-            <p>Durasi : 2 Jam</p>
-            <p>Sinopsis : Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam magnam, quo delectus nulla reprehenderit placeat iusto quibusdam voluptate quasi quod? Officia sed distinctio natus a libero, repellendus veniam officiis sunt!</p>
+            <p>Judul Film : {{$film->judul_film}}</p>
+            <p>Kategori : {{$film->Kategori->kategori}}</p>
+            <p>Produser : {{$film->produser}}</p>
+            <p>Produksi : {{$film->produksi}}</p>
+            <p>Home Page : {{($film->home_page != null ? $film->home_page : "-")}}</p>
+            <p>Durasi : {{$film->durasi}}</p>
+            <p>Sinopsis : {{$film->sinopsis}}</p>
+        </div>
+        <div class="button">
+            <form action="/pemesanantiket/{{$film->id}}" method="GET">
+                <button id="buttonPt">Pesan Tiket</button>
+            </form>
         </div>
     </div>
     @endsection

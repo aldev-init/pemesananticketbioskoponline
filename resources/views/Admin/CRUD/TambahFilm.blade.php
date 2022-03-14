@@ -36,7 +36,12 @@
                         </li>
                         <li>
                             <p>Genre</p>
-                            <input type="text" name="kategori" id="text_input" required>
+                            <select name="kategori" id="text_input">
+                                <option selected>Pilih Kategori</option>
+                                @foreach ($kategori as $ktg)
+                                    <option value="{{$ktg->id}}">{{$ktg->kategori}}</option>
+                                @endforeach
+                            </select>
                         </li>
                         <li>
                             <p>Produser</p>

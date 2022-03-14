@@ -30,7 +30,11 @@
                     </tr>
                     <tr>
                         <p>Judul Film: </p>
-                        <input type="text" name="judul_film" id="judulInp" value="Spiderman" disabled>
+                        <select name="film" id="judulfilmInp">
+                            @foreach ($filmall as $flmall )
+                            <option value="{{$flmall}}" {{($flmall->id == $film->id ? 'selected' : '')}}>{{$flmall->judul_film}}</option>
+                            @endforeach
+                        </select>
                     </tr>
                     <tr>
                         <ul>

@@ -12,38 +12,41 @@
     @section('body')
     <div id="bodydaftar">
         <table>
+            @foreach ($film as $flm )
             <tr>
                 <div id="judulfilm">
-                    <h3>Ethernals</h3>
+                    <h3>{{$flm->judul_film}}</h3>
                 </div>
-                <img src="{{asset('img/film/Ethernals.jpg')}}" alt="">
+                <a href="/film/{{$flm->id}}">
+                    <img width="185px" height="278px" src="{{asset('storage/'.$flm->gambar)}}" alt="">
+                </a>
                 <div id="infofilm">
-                    <p>Judul Film : Ethernals</p>
-                    <p>Produser : Unknown</p>
-                    <p>Produksi : Unknown</p>
-                    <p>Home Page : bla bla</p>
-                    <p>Durasi : 2 Jam</p>
-                    <p>Sinopsis : Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam magnam, quo delectus nulla reprehenderit placeat iusto quibusdam voluptate quasi quod? Officia sed distinctio natus a libero, repellendus veniam officiis sunt!</p>
+                    <p>Judul Film : {{$flm->judul_film}}</p>
+                    <p>Kategori : {{$flm->Kategori->kategori}}</p>
+                    <p>Produser : {{$flm->produser}}</p>
+                    <p>Produksi : {{$flm->produksi}}</p>
+                    <p>Home Page : {{($flm->home_page != null ? $flm->home_page : "-")}}</p>
+                    <p>Durasi : {{$flm->durasi}}</p>
+                    <p>Sinopsis : {{$flm->sinopsis}}</p>
+                    {{-- <div class="sinopsis">
+                        <p style="overflow: hidden;">{{$flm->sinopsis}}</p>
+                    </div> --}}
                 </div>
             </tr>
             <hr>
-            <tr>
-                <div id="judulfilm">
-                    <h3>Boba Feet</h3>
-                </div>
-                <img src="{{asset('img/film/BobaFeet.jpg')}}" alt="">
-                <div id="infofilm">
-                    <p>Judul Film : Boba Feet</p>
-                    <p>Produser : Unknown</p>
-                    <p>Produksi : Unknown</p>
-                    <p>Home Page : bla bla</p>
-                    <p>Durasi : 2 Jam</p>
-                    <p>Sinopsis : Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam magnam, quo delectus nulla reprehenderit placeat iusto quibusdam voluptate quasi quod? Officia sed distinctio natus a libero, repellendus veniam officiis sunt!</p>
-                </div>
-            </tr>
+            @endforeach
         </table>
         <p>Halaman 1</p>
     </div>
     @endsection
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+    // $(document).ready(function(){
+    //     $('.sinopsis').hide();
+    //     $('#show').click(function(){
+    //         $('.sinopsis').show();
+    //     })
+    // })
+</script>
 </html>

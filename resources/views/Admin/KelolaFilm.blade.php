@@ -21,7 +21,7 @@
                 <li>
                     <p class="judulfilm">{{$flm->judul_film}}</p>
                     <video width="300" height="150" src="{{asset('storage/'.$flm->video)}}" controls></video><br>
-                    <button class="detail-button">Lihat Detail</button>
+                    <button class="detail-button" type="button" onclick="redirect({{$flm->id}})">Lihat Detail</button>
                     <form action="/hapusfilm/{{$flm->id}}" method="POST">
                         @csrf
                         <button class="hapus-button">Hapus</button>
@@ -37,6 +37,9 @@
 <script>
     function tambahfilm(){
         window.location.href = "/tambahfilm";
+    }
+    function redirect(id){
+        window.location.href = "/detailfilm/"+id;
     }
 </script>
 @if (Session::has('status'))
