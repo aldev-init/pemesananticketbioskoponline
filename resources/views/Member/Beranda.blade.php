@@ -36,7 +36,8 @@
             <hr>
             @endforeach
         </table>
-        <p>Halaman 1</p>
+        <p>Halaman {{$film->currentPage()}}</p>
+        <p id="pagination">{{$film->links()}}</p>
     </div>
     @endsection
 </body>

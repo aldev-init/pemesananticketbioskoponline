@@ -12,7 +12,7 @@ class PagesControllerMember extends Controller
     }
 
     public function home(){
-        $film = Film::all();
+        $film = Film::simplePaginate(2);
         return view('Member.Beranda',compact('film'));
     }
 

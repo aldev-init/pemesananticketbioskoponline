@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Film;
+use App\Models\Jadwal;
 use App\Models\Kategori;
+use App\Models\Studio;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
@@ -50,6 +52,8 @@ class SystemControllerAdmin extends Controller
             //kosong
     }
 
+
+
     public function tambahkategori(Request $request){
         Kategori::create([
             'kategori'=>$request->kategori
@@ -68,5 +72,45 @@ class SystemControllerAdmin extends Controller
     public function hapuskategori($id){
         Kategori::where('id',$id)->delete();
         return redirect('/kelolakategori')->with('status','Hapus Kategori Berhasil');
+    }
+
+
+    public function tambahstudio(Request $request){
+        Studio::create([
+            'studio'=>$request->studio
+        ]);
+        return redirect('/kelolastudio')->with('status','Tambah Studio Berhasil');
+    }
+
+    public function editstudio(Request $request,$id){
+        Studio::where('id',$id)->update([
+            'studio'=>$request->studio
+        ]);
+        return redirect('/kelolastudio')->with('status','Edit Studio Berhasil');
+    }
+
+    public function hapusstudio($id){
+        Studio::where('id',$id)->delete();
+        return redirect('/kelolastudio')->with('status','Hapus Studio Berhasil');
+    }
+
+
+    public function tambahjam(Request $request){
+        Jadwal::create([
+            'jam_tayang'=>$request->jam_tayang,
+        ]);
+        return redirect('/kelolajam')->with('status','Tambah Jam Tayang Berhasil');
+    }
+
+    public function editjam(Request $request,$id){
+        Jadwal::where('id',$id)->update([
+            'jam_tayang'=>$request->jam_tayang
+        ]);
+        return redirect('/kelolajam')->with('status','Edit Jam Tayang Berhasil');
+    }
+
+    public function hapusjam($id){
+        Jadwal::where('id',$id)->delete();
+        return redirect('/kelolajam')->with('status','Hapus Jam Tayang Berhasil');
     }
 }

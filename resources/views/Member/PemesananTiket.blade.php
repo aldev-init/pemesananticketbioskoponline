@@ -19,7 +19,7 @@
                 <table>
                     <tr>
                         <p>Nama Lengkap: </p>
-                        <input type="text" name="nama" id="namaInp">
+                        <input type="text" name="nama" id="namaInp" value="{{Auth::user()->nama_lengkap}}">
                     </tr>
                     <tr>
                         <p>Studio: </p>
@@ -88,6 +88,18 @@
                         <button class="button" type="button" onclick="exit()">Keluar</button>
                     </tr>
                     <tr>
+                        <div id="displayjamtayang">
+                            <textarea name="displayjamtayang" id="" cols="25" rows="10">
+                                Detail Ticket
+
+                                Senin-Kamis: RP.30.000
+                                Jumat: RP.40.000
+                                Sabtu: RP.50.000
+                                Minggu: RP.60.000
+                            </textarea>
+                        </div>
+                    </tr>
+                    <tr>
                         <table>
                             <tr>
                                 <th>No</th>
@@ -129,16 +141,6 @@
                         <button class="button-end-h">Hapus</button>
                     </tr>
                 </table>
-                <div id="displayjamtayang">
-                    <textarea name="displayjamtayang" id="" cols="25" rows="10">
-                        Detail Ticket
-
-                        Senin-Kamis: RP.30.000
-                        Jumat: RP.40.000
-                        Sabtu: RP.50.000
-                        Minggu: RP.60.000
-                    </textarea>
-                </div>
             </div>
 
         </form>

@@ -1,5 +1,5 @@
 @extends('layout.navbarAdmin')
-@section('judul','Kelola Jam')
+@section('judul','Kelola Studio')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,22 +12,22 @@
     @section('body')
     <div id="bodydaftar">
         <div id="judul">
-            <h3>Kelola Jam </h3>
+            <h3>Kelola Studio Film</h3>
         </div>
         <div id="daftar">
-            <button id="buttonTmbh" type="button" onclick="redirect()">Tambah Jam</button>
+            <button id="buttonTmbh" type="button" onclick="redirect()">Tambah Studio</button>
             <table>
                 <tr>
                     <th>Id</th>
-                    <th>Jam</th>
+                    <th>Studio</th>
                     <th>Action</th>
                 </tr>
                 {{-- ----- --}}
-                @foreach ($jadwal as $jdl )
+                @foreach ($studio as $std )
                 <tr>
-                    <td>{{$jdl->id}}</td>
-                    <td>{{$jdl->jam_tayang}}</td>
-                    <td><a href="/editjam/{{$jdl->id}}">Edit</a> | <a href="/hapusjam/{{$jdl->id}}">Hapus</a></td>
+                    <td>{{$std->id}}</td>
+                    <td>{{$std->studio}}</td>
+                    <td><a href="/editstudio/{{$std->id}}">Edit</a> | <a href="/hapusstudio/{{$std->id}}">Hapus</a></td>
                 </tr>
                 @endforeach
             </table>
@@ -37,7 +37,7 @@
 </body>
 <script>
     function redirect(){
-        window.location.href = "/tambahjam";
+        window.location.href = "/tambahstudio";
     }
 </script>
 @if (Session::has('status'))

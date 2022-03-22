@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Film;
+use App\Models\Jadwal;
 use App\Models\Kategori;
+use App\Models\Studio;
 use Illuminate\Http\Request;
 
 class PagesControllerAdmin extends Controller
@@ -15,8 +17,8 @@ class PagesControllerAdmin extends Controller
     }
 
     public function kelolajam(){
-        $film = Film::all();
-        return view('Admin.KelolaJam',compact('film'));
+        $jadwal = Jadwal::all();
+        return view('Admin.KelolaJam',compact('jadwal'));
     }
 
     public function detailfilm($id){
@@ -29,6 +31,12 @@ class PagesControllerAdmin extends Controller
         return view('Admin.KelolaKategori',compact('kategori'));
     }
 
+    public function kelolastudio(){
+        $studio = Studio::all();
+        return view('Admin.KelolaStudio',compact('studio'));
+    }
+
+
 
     //CRUD
     //tambahfilm
@@ -37,6 +45,7 @@ class PagesControllerAdmin extends Controller
         return view('Admin.CRUD.TambahFilm',compact('kategori'));
     }
 
+
     public function tambahkategori(){
         return view('Admin.CRUD.TambahKategori');
     }
@@ -44,5 +53,25 @@ class PagesControllerAdmin extends Controller
     public function editkategori($id){
         $kategori = Kategori::where('id',$id)->first();
         return view('Admin.CRUD.EditKategori',compact('kategori'));
+    }
+
+
+    public function tambahstudio(){
+        return view('Admin.CRUD.TambahStudio');
+    }
+
+    public function editstudio(Request $request ,$id){
+        $studio = Studio::where('id',$id)->first();
+        return view('Admin.CRUD.EditStudio',compact('studio'));
+    }
+
+
+    public function tambahjam(){
+        return view('Admin.CRUD.TambahJam');
+    }
+
+    public function editjam(Request $request,$id){
+        $jadwal = Jadwal::where('id',$id)->first();
+        return view('Admin.CRUD.EditJam',compact('jadwal'));
     }
 }

@@ -48,11 +48,20 @@ Route::controller(PagesControllerAdmin::class)->group(function(){
     Route::middleware(['auth:admin'])->group(function(){
         Route::get('/kelolafilm','kelolafilm');
         Route::get('/tambahfilm','tambahfilm');
-        Route::get('/kelolajam','kelolajam');
         Route::get('/detailfilm/{id}','detailfilm');
+        //crud jam
+        Route::get('/kelolajam','kelolajam');
+        //crud kategori
         Route::get('/kelolakategori','kelolakategori');
         Route::get('/tambahkategori','tambahkategori');
         Route::get('/editkategori/{id}','editkategori');
+        //crud studio
+        Route::get('/kelolastudio','kelolastudio');
+        Route::get('/tambahstudio','tambahstudio');
+        Route::get('/editstudio/{id}','editstudio');
+        //crud jam tayang
+        Route::get('/tambahjam','tambahjam');
+        Route::get('/editjam/{id}','editjam');
     });
 });
 
@@ -64,9 +73,18 @@ Route::controller(SystemControllerAdmin::class)->group(function(){
         Route::post('/tambahfilm','tambahfilm');
         Route::post('/hapusfilm/{id}','hapusfilm');
         Route::post('/editfilm/{id}','editfilm');
+        //crud kategori
         Route::post('/tambahkategori','tambahkategori');
         Route::post('/editkategori/{id}','editkategori');
         Route::get('/hapuskategori/{id}','hapuskategori');
+        //crud studio
+        Route::post('/tambahstudio','tambahstudio');
+        Route::post('/editstudio/{id}','editstudio');
+        Route::get('/hapusstudio/{id}','hapusstudio');
+        //crud jam tayang
+        Route::post('/tambahjam','tambahjam');
+        Route::post('/editjam/{id}','editjam');
+        Route::get('/hapusjam/{id}','hapusjam');
     });
 });
 

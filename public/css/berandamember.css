@@ -31,3 +31,16 @@
 /* .sinopsis{
     width: 20px;
 } */
+
+.pagination{
+    margin: 0px 0px 0px -50px;
+}
+.pagination li{
+    list-style-type: none;
+    display: inline;
+    padding: 10px;
+}
+.pagination li a{
+    text-decoration: none;
+    color: white;
+}

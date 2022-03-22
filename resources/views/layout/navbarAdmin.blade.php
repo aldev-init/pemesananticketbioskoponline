@@ -42,7 +42,7 @@
                 </li>
                 <li>
                     <div class="button">
-                        <a href="">Kelola Studio</a>
+                        <a href="/kelolastudio">Kelola Studio</a>
                     </div>
                 </li>
                 <li>
