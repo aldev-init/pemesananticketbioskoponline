@@ -65,5 +65,6 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'protectadmin' => \App\Http\Middleware\roleProtectAdmin::class,
         'protectmember' => \App\Http\Middleware\roleProtectMember::class,
+        'cantback'=> \App\Http\Middleware\CantBack::class,
     ];
 }

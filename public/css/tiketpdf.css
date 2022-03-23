@@ -1,0 +1,48 @@
+body{
+    margin: 0px;
+}
+#navbar{
+    background-image: url('../img/polygonal19.jpg');
+    color: #2d3436;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 30px;
+    width: auto;
+    margin: 0px 0px 0px 0px;
+}
+#navbar h4{
+    font-size: 30px;
+    margin: -10px 0px 0px 5px;
+}
+#navbar p{
+    margin: 0px 0px 0px 5px;
+    font-size: small;
+}
+
+.table{
+    margin: 0px 0px 0px 0px ;
+    background-color: #34495e;
+    width: 97%;
+    padding: 20px;
+}
+
+.table #title-text{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+.table ul li{
+    list-style-type: none;
+}
+
+.title-content{
+    font-size: 25px;
+    color: white;
+}
+
+.text-content{
+    color: white;
+    font-size: 20px;
+}

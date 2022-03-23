@@ -2,6 +2,9 @@
     padding: 10px;
 }
 
+table{
+    width: 100%;
+}
 
 table tr th{
     background-color: #222f3e;

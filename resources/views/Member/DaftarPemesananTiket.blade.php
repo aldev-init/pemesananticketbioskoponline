@@ -15,40 +15,33 @@
                 <h3>Daftar Pemesanan Ticket Oleh: {{Auth::user()->nama_lengkap}}</h3>
             </div>
             <div id="bodycontent">
-                <table >
+                <table>
                     <tr>
                         <th>Judul Film</th>
                         <th>Jadwal Tayang</th>
-                        <th>Bangku</th>
+                        <th>Kursi</th>
                         <th>Status</th>
                         <th>Action</th>
                     </tr>
                     {{-- body --}}
+                    @foreach ($pembelian as $pbl )
                     <tr>
-                        <td>Spiderman,This Is My Home</td>
-                        <td>26/05/2020</td>
-                        <td>A1</td>
-                        <td>Belum Dibayar</td>
-                        <td><button href="">Detail</button>  | <button href="">Cetak</button></td>
+                        <td>{{$pbl->Film->judul_film}}</td>
+                        <td>{{$pbl->hari}},{{$pbl->Jadwal->jam_tayang}}</td>
+                        <td>{{$pbl->no_kursi}}</td>
+                        <td>{{($pbl->status == 1 ? 'Lunas' : 'Belum Lunas')}}</td>
+                        <td><button href="">Detail</button>  | <button type="button" onclick="print({{$pbl->id}})">Cetak</button></td>
                     </tr>
-                    <tr>
-                        <td>Spiderman,This Is My Wife</td>
-                        <td>12/05/2020</td>
-                        <td>A12</td>
-                        <td>Belum Dibayar</td>
-                        <td><button href="">Detail</button>  | <button href="">Cetak</button></td>
-                    </tr>
-                    <tr>
-                        <td>Spiderman,This Is My Verse</td>
-                        <td>08/05/2020</td>
-                        <td>A3</td>
-                        <td>Belum Dibayar</td>
-                        <td><button href="">Detail</button>  | <button href="">Cetak</button></td>
-                    </tr>
+                    @endforeach
                 </table>
             </div>
             <p>Halaman 1</p>
         </div>
     @endsection
 </body>
+<script>
+    function print(id) {
+        window.location.href = '/tiket/'+id;
+    }
+</script>
 </html>

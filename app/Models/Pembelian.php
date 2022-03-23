@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Pemesanan extends Model
+class Pembelian extends Model
 {
-    protected $table = 'pemesanan';
+    protected $table = 'pembelian';
     protected $fillable = ['nama','studio','film','jam_tayang','no_kursi','jumlah_tiket','total_harga','hari'];
     use HasFactory;
 

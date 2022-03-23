@@ -71,6 +71,7 @@ table{
     margin: 0px 0px 0px 0px;
 }
 table tr th{
+    padding: 10px;
     background-color: #222f3e;
 }
 
@@ -107,6 +108,10 @@ table tr td{
     font-family: 'Ubuntu', sans-serif;
     transition: ease-in 0.2s;
 }
+.button-end-h{
+    float: right;
+    transform: translate(-190px, -74px);
+}
 .button-end:hover{
     background-color: #0fb9b1;
     font-family: 'Ubuntu', sans-serif;
@@ -119,4 +124,7 @@ table tr td{
     color: black;
 }
 
+.studio{
+    width: 340px;
+}
 

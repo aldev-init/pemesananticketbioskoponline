@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Film;
+use App\Models\Jadwal;
+use App\Models\Pembelian;
+use App\Models\Pemesanan;
+use App\Models\Studio;
 
 class PagesControllerMember extends Controller
 {
@@ -27,16 +31,24 @@ class PagesControllerMember extends Controller
     }
 
     public function daftarpemesanantiket(){
-        return view('Member.DaftarPemesananTiket');
+        $pembelian = Pembelian::all();
+        return view('Member.DaftarPemesananTiket',compact('pembelian'));
     }
 
     public function pemesanantiket(){
-
-        return redirect('/pemesanantiket/4');
+        $film = null;
+        $filmall = Film::all();
+        $studio = Studio::all();
+        $jadwal = Jadwal::all();
+        $pemesanan = Pemesanan::all();
+        return view('Member.PemesananTiket',compact('filmall','studio','film','jadwal','pemesanan'));
     }
     public function pemesanantiketid($id){
         $film = Film::where('id',$id)->first();
         $filmall = Film::all();
-        return view('Member.PemesananTiket',compact('film','filmall'));
+        $studio = Studio::all();
+        $jadwal = Jadwal::all();
+        $pemesanan = Pemesanan::all();
+        return view('Member.PemesananTiket',compact('filmall','studio','film','jadwal','pemesanan'));
     }
 }

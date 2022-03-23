@@ -24,7 +24,7 @@ Route::controller(PagesControllerMember::class)->group(function (){
     Route::get('/','home');
     Route::get('/film/{id}','film');
     Route::get('/daftarfilm','daftarfilm');
-    Route::middleware(['auth'])->group(function(){
+    Route::middleware(['auth','cantback'])->group(function(){
         Route::get('/daftarpemesanantiket','daftarpemesanantiket');
         Route::get('/pemesanantiket','pemesanantiket');
         Route::get('/pemesanantiket/{id}','pemesanantiketid');
@@ -35,8 +35,12 @@ Route::controller(PagesControllerMember::class)->group(function (){
 //system
 //member
 Route::controller(SystemControllerMember::class)->group(function(){
-    Route::middleware(['auth'])->group(function(){
+    Route::middleware(['auth','cantback'])->group(function(){
         Route::get('/logout','logout');
+        Route::post('/pemesanantiket','pemesanantiket');
+        Route::post('/hapuspemesanan','hapuspemesanan');
+        Route::get('/tiket/{id}','tiket');
+        Route::get('/debugtiket','debugtiket');
     });
     Route::post('/register','register');
     Route::post('/login','login');
@@ -45,7 +49,7 @@ Route::controller(SystemControllerMember::class)->group(function(){
 
 //Pages Admin
 Route::controller(PagesControllerAdmin::class)->group(function(){
-    Route::middleware(['auth:admin'])->group(function(){
+    Route::middleware(['auth:admin','cantback'])->group(function(){
         Route::get('/kelolafilm','kelolafilm');
         Route::get('/tambahfilm','tambahfilm');
         Route::get('/detailfilm/{id}','detailfilm');
@@ -68,7 +72,7 @@ Route::controller(PagesControllerAdmin::class)->group(function(){
 
 //system Admin
 Route::controller(SystemControllerAdmin::class)->group(function(){
-    Route::middleware(['auth:admin'])->group(function(){
+    Route::middleware(['auth:admin','cantback'])->group(function(){
         Route::get('/logoutadmin','logoutadmin');
         Route::post('/tambahfilm','tambahfilm');
         Route::post('/hapusfilm/{id}','hapusfilm');
